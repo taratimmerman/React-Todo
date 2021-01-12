@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Todo = props => {
 
@@ -6,8 +6,8 @@ const Todo = props => {
         props.handleTaskToggle(props.task.id);
     }
     return (
-        <div onClick={handleClick} className={`task${props.task.completed ? ' completed' : ''}`}>
-        <p>{props.task.name}</p>
+        <div onClick={handleClick} className={`todo-row task${props.task.completed ? ' completed' : ''}`}>
+            <p>{props.task.name}</p>
         </div>
     )
 }
