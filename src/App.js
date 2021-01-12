@@ -42,11 +42,11 @@ class App extends React.Component {
 
   handleTaskCompleted = () => {
     const newTodos = this.state.todos.filter(task => {
-      return(!task.purchased);
+      return(!task.completed);
     });
 
     this.setState({
-      groceries: newTodos
+      todos: newTodos
     })
   }
 
